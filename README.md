@@ -5,5 +5,6 @@
 2. **Kontroller**:
    - **Başlat/Yeniden Başlat**: `BOŞLUK (SPACE)` tuşu.
    - **Hareket**: `W, A, S, D` veya `YÖN TUŞLARI`.
-3. **Amaç**: Kırmızı asteroidlerden kaçın ve OnsaFX logolarını toplayarak skorunuzu (Lot) artırın.
+3. **Amaç**: Kırmızı asteroidlerden kaçın ve O-FX logolarını toplayarak skorunuzu (Lot) artırın.
+
 
