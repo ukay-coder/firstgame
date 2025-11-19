@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnsaFX Space Runner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-layer">
+            <div id="hud-top">
+                <div class="hud-panel">
+                    <span class="label">LOTS</span>
+                    <span class="value" id="score-display">0.00</span>
+                </div>
+                <div class="hud-panel">
+                    <span class="label">LIVES</span>
+                    <div id="lives-display" class="hearts">
+                        <span class="heart">❤</span><span class="heart">❤</span><span class="heart">❤</span>
+                    </div>
+                </div>
+            </div>
+            <div id="start-screen" class="overlay">
+                <h1>ONSAFX SPACE RUNNER</h1>
+                <p>Press <span class="key">SPACE</span> to Start</p>
+                <p class="controls">Use <span class="key">WASD</span> or <span class="key">ARROWS</span> to Move</p>
+            </div>
+            <div id="game-over-screen" class="overlay hidden">
+                <h1>GAME OVER</h1>
+                <p>Total Lots: <span id="final-score">0.00</span></p>
+                <p>Press <span class="key">SPACE</span> to Restart</p>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>

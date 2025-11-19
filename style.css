@@ -1,0 +1,137 @@
+:root {
+    --onsafx-blue-dark: #004fa3;
+    --onsafx-blue-mid: #0068A7;
+    --onsafx-blue-bright: #0490da;
+    --bg-dark: #0a0a12;
+    --text-light: #ffffff;
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-main);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+}
+
+canvas {
+    box-shadow: 0 0 50px rgba(4, 144, 218, 0.1);
+    border: 1px solid #333;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hud-panel {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--onsafx-blue-bright);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hud-top {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+}
+
+.heart {
+    color: #ff3333;
+    font-size: 1.5rem;
+    margin: 0 2px;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.label {
+    font-size: 0.8rem;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+.value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--onsafx-blue-bright);
+    font-variant-numeric: tabular-nums;
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--onsafx-blue-mid), var(--onsafx-blue-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.key {
+    background: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9em;
+}
